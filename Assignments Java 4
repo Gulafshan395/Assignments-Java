@@ -1,1 +1,46 @@
+abstract class Marks{
+    abstract float getPercentage();
+}
+
+class A extends Marks{
+    int sub1;
+    int sub2;
+    int sub3;
+    A(int x,int y,int z){
+        sub1=x;
+        sub2=y;
+        sub3=z;
+        
+    }
+    float getPercentage(){
+        float val = (float)(sub1+sub2+sub3)/3;
+        return val;
+    }
+}
+
+class B extends Marks{
+    int sub1;
+    int sub2;
+    int sub3;
+    int sub4;
+    B(int x,int y, int z, int w){
+        sub1=x;
+        sub2=y;
+        sub3=z;
+        sub4=w;
+    }
+    float getPercentage(){
+        float val = (float)(sub1+sub2+sub3+sub4)/4;
+        return val;
+    }
+}
+
+public class Main{
+    public static void main(String args[]){
+        A obj = new A(100,50,100);
+        System.out.println(obj.getPercentage());
+        B obj1 = new B(100,50,100,50);
+        System.out.println(obj1.getPercentage());
+    }
+}
 
