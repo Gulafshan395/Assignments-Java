@@ -1,0 +1,59 @@
+
+import java.util.*;
+class Shape {
+    int a;
+    int l;
+    int b;
+    double r;
+    Shape(){
+        System.out.println("this is shape");
+    }
+    Shape(int a){
+       this.a=a;
+    }
+    Shape(int l,int b){
+        this.l=l;
+        this.b=b;
+        
+    }
+    Shape(double r){
+        this.r=r;
+        
+    }
+    void Ractangle(){
+        int val = l*b;
+        System.out.println("Ractangle Area: "+val);
+    }
+    void Square(){
+        int val = a*a ;
+        System.out.println("Square Area"+ val);
+    }
+    void Circle(){
+        double val = (double)Math.PI*r*r;
+        System.out.println("Circle Area"+val);
+    }
+    void Area(int d1, int d2){
+        float val = (float)d1*d2/2;
+        System.out.println("Rhombus Area"+val);
+    }
+    void Area(double h , double b){
+        double val = (double) b*h/2;
+        System.out.println("triangle Area"+val);
+    }
+}
+
+public class Main
+{
+	public static void main(String[] args) {
+		Shape rect = new Shape(7,6);
+		rect.Ractangle();
+		Shape square = new Shape(2);
+		square.Square();
+		Shape circle = new Shape(3.6);
+		circle.Circle();
+		Shape area = new Shape();
+		area.Area(1,1);
+		area.Area(1.2,2.8);
+	}
+}
+
