@@ -1,0 +1,68 @@
+class Student{
+    String name;
+    int age;
+    char section;
+    char gender;
+    int sub1;
+    int sub2;
+    int sub3;
+    Student(int x,int y,int z){ //this keyword not needed here
+        this.sub1 = x;
+        this.sub2 = y;
+        this.sub3 = z;
+    }
+    
+    int marks(){
+        return sub1+sub2+sub3;
+    }
+    float percentage(){
+        return (float)(sub1+sub2+sub3)/3;
+    }
+    Student(int sub2, int sub3){
+        sub1 = 0;
+        this.sub2 = sub2;
+        this.sub3 = sub3;
+    }
+    
+    Student(String name,int age ,char section , char gender , int a, int b, int c){
+        this.name = name;
+        this.age = age;
+        this.section = section;
+        this.gender = gender;
+        sub1 = a;
+        sub2 = b;
+        sub3 = c;
+    }
+    void display(){
+        System.out.println("name: "+ name+ " Age: "+age +" Section: "+section+" Gendre: "+gender+" Sub1"+ sub1+" sub2: "+sub2+ "sub3: "+sub3);
+    }
+}
+public class Main
+{
+	public static void main(String[] args) {
+		Student s1 = new Student(100,50,100);
+		System.out.println("s1 marks: "+s1.marks());
+		System.out.println("s1 per: "+s1.percentage());
+        Student s2 = new Student(10,50,100);
+		System.out.println("s2 marks: "+s2.marks());
+		System.out.println("s2 per: "+s2.percentage());
+		
+		Student s3 = new Student(100,30,100);
+		System.out.println("s3 marks: "+s3.marks());
+		System.out.println("s3 per: "+s3.percentage());
+		
+		Student s4 = new Student(60,30,70);
+		System.out.println("s4 marks: "+s4.marks());
+		System.out.println("s4 per: "+s4.percentage());
+	/////////////////////////////////////////////////
+        System.out.println();
+        Student st1=new Student("Ankit",23,'A','M',100,80,90);
+		st1.display();
+		Student st2=new Student("Gulafsha",25,'B','F',10,80,90);
+		st2.display();
+		Student st3=new Student("Pallavi",30,'C','F',100,8,90);
+		st3.display();
+		Student st4=new Student("Rashika",37,'D','M',100,80,9);
+		st4.display();
+	}
+}
